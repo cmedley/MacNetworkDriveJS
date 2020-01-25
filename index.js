@@ -81,7 +81,7 @@ const macNetworkDrive = {
           }
 
           serverPath = serverPath.replace("\\\\", "");
-          serverPath = serverPath.replace("\\", "/");
+          serverPath = serverPath.replace(/\\/g, "/");
 
           let pathDrive = `smb://${serverPath}`;
           let mountScript = `
