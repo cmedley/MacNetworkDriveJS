@@ -25,8 +25,7 @@ const macNetworkDrive = {
           for (let line of pathList) {
             let matches = line.match(re);
             if (matches) {
-              drivePath["\\\\" + matches[1].replace("/", "\\") + "\\"] =
-                matches[2];
+              drivePath[matches[1]] = matches[2];
             }
           }
           resolve(drivePath);
